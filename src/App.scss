@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pl-pr-15 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.App {
+  border: 3px solid #000;
+  min-height: 100vh; 
+  .title {
+    text-align: center;
+    border-bottom: 2px solid green;
+  }
+  .components {
+    width: 100%;
+    height: 46vh;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid;
+    padding: 20px;
+    .component-title{
+      text-align: center;
+      color: blue;
+    }
+  }
+  .spin-loading {
+    text-align: center;
+  }
+}
