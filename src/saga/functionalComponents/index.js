@@ -25,20 +25,17 @@ const getUserInfo = ({name, email, phone, address: {city, street} = {}}) => {
 const Users = () => {
     const dispatch = useDispatch();
     const [userId, setUserID] = useState(null);
-    const {users} = useSelector(state => state.users);
-    const {isLoading} = useSelector(state => state.users);
-    const {user = {}} = useSelector(state => state.users);
-    const {isLoadingUser} = useSelector(state => state.users);
+    const {users, user = {}, isLoading, isLoadingUser} = useSelector(state => state.users);
 
     useEffect(() => {
         dispatch(getUsersStart())
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         if(userId) {
             dispatch(getUserStart(userId));
         }
-    }, [userId]);
+    }, [userId]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
